@@ -1,0 +1,833 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Interop.AXVLC.1.0, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Interface AXVLC.IVLCControl: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Boolean Visible 'get set' : 
+    Boolean Playing 'get ' : 
+    Single Position 'get set' : 
+    Int32 Time 'get set' : 
+    Int32 Length 'get ' : 
+    Int32 Volume 'get set' : 
+    Int32 PlaylistIndex 'get ' : 
+    Int32 PlaylistCount 'get ' : 
+    System.String VersionInfo 'get ' : 
+    System.String MRL 'get set' : 
+    Boolean AutoPlay 'get set' : 
+    Boolean AutoLoop 'get set' : 
+  Methods:
+    get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    play(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    pause(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Playing(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Position(Single(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Time(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Time(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    shuttle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    fullscreen(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    playFaster(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    playSlower(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Volume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Volume(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    toggleMute(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    setVariable(String(In, HasFieldMarshal), Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    getVariable(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    addTarget(String(In, HasFieldMarshal), Object(In, HasFieldMarshal), VLCPlaylistMode(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_PlaylistIndex(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_PlaylistCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    playlistNext(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    playlistPrev(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    playlistClear(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_VersionInfo(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MRL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MRL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AutoPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AutoPlay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AutoLoop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AutoLoop(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Struct AXVLC.VLCPlaylistMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    AXVLC.VLCPlaylistMode VLCPlayListInsert = 1 : Public, Static, Literal, HasDefault
+    AXVLC.VLCPlaylistMode VLCPlayListInsertAndGo = 9 : Public, Static, Literal, HasDefault
+    AXVLC.VLCPlaylistMode VLCPlayListReplace = 2 : Public, Static, Literal, HasDefault
+    AXVLC.VLCPlaylistMode VLCPlayListReplaceAndGo = 10 : Public, Static, Literal, HasDefault
+    AXVLC.VLCPlaylistMode VLCPlayListAppend = 4 : Public, Static, Literal, HasDefault
+    AXVLC.VLCPlaylistMode VLCPlayListAppendAndGo = 12 : Public, Static, Literal, HasDefault
+    AXVLC.VLCPlaylistMode VLCPlayListCheckInsert = 16 : Public, Static, Literal, HasDefault
+Interface AXVLC.IVLCAudio: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Boolean mute 'get set' : 
+    Int32 Volume 'get set' : 
+    Int32 track 'get set' : 
+    Int32 count 'get ' : 
+    Int32 channel 'get set' : 
+  Methods:
+    get_mute(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_mute(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Volume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Volume(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    toggleMute(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_track(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_track(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    description(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_channel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_channel(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface AXVLC.IVLCInput: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Double Length 'get ' : 
+    Double Position 'get set' : 
+    Double Time 'get set' : 
+    Int32 state 'get ' : 
+    Double rate 'get set' : 
+    Double fps 'get ' : 
+    Boolean hasVout 'get ' : 
+  Methods:
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Position(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Time(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Time(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_state(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_rate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_rate(Double(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_fps(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_hasVout(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface AXVLC.IVLCLogo: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int32 delay 'get set' : 
+    Int32 repeat 'get set' : 
+    Int32 opacity 'get set' : 
+    System.String Position 'get set' : 
+    Int32 x    'get set' : 
+    Int32 y    'get set' : 
+  Methods:
+    enable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    disable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    file(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_delay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_delay(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_repeat(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_repeat(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_opacity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_opacity(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Position(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_x(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_x(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_y(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_y(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface AXVLC.IVLCDeinterlace: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    enable(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    disable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface AXVLC.IVLCMarquee: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.String text 'get set' : 
+    Int32 color 'get set' : 
+    Int32 opacity 'get set' : 
+    System.String Position 'get set' : 
+    Int32 refresh 'get set' : 
+    Int32 size 'get set' : 
+    Int32 timeout 'get set' : 
+    Int32 x    'get set' : 
+    Int32 y    'get set' : 
+  Methods:
+    enable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    disable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_text(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_text(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_color(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_color(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_opacity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_opacity(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Position(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_refresh(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_refresh(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_size(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_size(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_timeout(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_timeout(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_x(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_x(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_y(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_y(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface AXVLC.IVLCPlaylist: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int32 itemCount 'get ' : 
+    Boolean isPlaying 'get ' : 
+    AXVLC.IVLCPlaylistItems items 'get ' : 
+  Methods:
+    get_itemCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_isPlaying(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    add(String(In, HasFieldMarshal), Object(In, Optional, HasFieldMarshal), Object(In, Optional, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    play(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    playItem(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    pause(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    togglePause(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    next(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    prev(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    clear(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    removeItem(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_items(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface AXVLC.IVLCPlaylistItems: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int32 count 'get ' : 
+  Methods:
+    get_count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    clear(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface AXVLC.IVLCSubtitle: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int32 track 'get set' : 
+    Int32 count 'get ' : 
+  Methods:
+    get_track(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_track(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    description(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface AXVLC.IVLCVideo: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Boolean fullscreen 'get set' : 
+    Int32 width 'get ' : 
+    Int32 height 'get ' : 
+    System.String aspectRatio 'get set' : 
+    Int32 subtitle 'get set' : 
+    System.String crop 'get set' : 
+    Int32 teletext 'get set' : 
+    AXVLC.IVLCMarquee marquee 'get ' : 
+    AXVLC.IVLCLogo logo 'get ' : 
+    AXVLC.IVLCDeinterlace deinterlace 'get ' : 
+  Methods:
+    get_fullscreen(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_fullscreen(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_height(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_aspectRatio(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_aspectRatio(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_subtitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_subtitle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_crop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_crop(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_teletext(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_teletext(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    toggleFullscreen(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    takeSnapshot(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    toggleTeletext(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_marquee(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_logo(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_deinterlace(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface AXVLC.IPictureDisp: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+Interface AXVLC.IVLCControl2: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Boolean AutoLoop 'get set' : 
+    Boolean AutoPlay 'get set' : 
+    System.String BaseURL 'get set' : 
+    Int32 StartTime 'get set' : 
+    System.String MRL 'get set' : 
+    System.String VersionInfo 'get ' : 
+    Boolean Visible 'get set' : 
+    Int32 Volume 'get set' : 
+    UInt32 BackColor 'get set' : 
+    Boolean Toolbar 'get set' : 
+    AXVLC.IVLCAudio audio 'get ' : 
+    AXVLC.IVLCInput input 'get ' : 
+    AXVLC.IVLCPlaylist playlist 'get ' : 
+    AXVLC.IVLCSubtitle subtitle 'get ' : 
+    AXVLC.IVLCVideo video 'get ' : 
+    Boolean FullscreenEnabled 'get set' : 
+    AXVLC.IVLCMediaDescription mediaDescription 'get ' : 
+  Methods:
+    get_AutoLoop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AutoLoop(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AutoPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AutoPlay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BaseURL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BaseURL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_StartTime(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_StartTime(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MRL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MRL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_VersionInfo(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Volume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Volume(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Toolbar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Toolbar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_audio(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_input(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_playlist(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_subtitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_video(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_FullscreenEnabled(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_FullscreenEnabled(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_mediaDescription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface AXVLC.IVLCMediaDescription: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.String title 'get ' : 
+    System.String artist 'get ' : 
+    System.String genre 'get ' : 
+    System.String copyright 'get ' : 
+    System.String album 'get ' : 
+    System.String trackNumber 'get ' : 
+    System.String description 'get ' : 
+    System.String rating 'get ' : 
+    System.String date 'get ' : 
+    System.String setting 'get ' : 
+    System.String url 'get ' : 
+    System.String language 'get ' : 
+    System.String nowPlaying 'get ' : 
+    System.String publisher 'get ' : 
+    System.String encodedBy 'get ' : 
+    System.String artworkURL 'get ' : 
+    System.String trackID 'get ' : 
+  Methods:
+    get_title(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_artist(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_genre(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_copyright(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_album(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_trackNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_description(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_rating(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_date(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_setting(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_url(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_language(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_nowPlaying(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_publisher(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_encodedBy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_artworkURL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_trackID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface AXVLC.DVLCEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    play(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    pause(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerNothingSpecial(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerOpening(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerBuffering(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerPlaying(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerPaused(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerForward(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerBackward(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerEncounteredError(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerEndReached(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerStopped(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerTimeChanged(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerPositionChanged(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerSeekableChanged(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MediaPlayerPausableChanged(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Struct AXVLC.eVLCPlaylistMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    AXVLC.eVLCPlaylistMode VLCPlayListInsert = 1 : Public, Static, Literal, HasDefault
+    AXVLC.eVLCPlaylistMode VLCPlayListInsertAndGo = 9 : Public, Static, Literal, HasDefault
+    AXVLC.eVLCPlaylistMode VLCPlayListReplace = 2 : Public, Static, Literal, HasDefault
+    AXVLC.eVLCPlaylistMode VLCPlayListReplaceAndGo = 10 : Public, Static, Literal, HasDefault
+    AXVLC.eVLCPlaylistMode VLCPlayListAppend = 4 : Public, Static, Literal, HasDefault
+    AXVLC.eVLCPlaylistMode VLCPlayListAppendAndGo = 12 : Public, Static, Literal, HasDefault
+    AXVLC.eVLCPlaylistMode VLCPlayListCheckInsert = 16 : Public, Static, Literal, HasDefault
+Class AXVLC.VLCPluginClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    AXVLC.IVLCControl
+    AXVLC.VLCPlugin
+    AXVLC.DVLCEvents_Event
+    AXVLC.IVLCControl2
+  Properties:
+    Boolean Visible 'get set' : 
+    Boolean Playing 'get ' : 
+    Single Position 'get set' : 
+    Int32 Time 'get set' : 
+    Int32 Length 'get ' : 
+    Int32 Volume 'get set' : 
+    Int32 PlaylistIndex 'get ' : 
+    Int32 PlaylistCount 'get ' : 
+    System.String VersionInfo 'get ' : 
+    System.String MRL 'get set' : 
+    Boolean AutoPlay 'get set' : 
+    Boolean AutoLoop 'get set' : 
+    Boolean IVLCControl2_AutoLoop 'get set' : 
+    Boolean IVLCControl2_AutoPlay 'get set' : 
+    System.String BaseURL 'get set' : 
+    Int32 StartTime 'get set' : 
+    System.String IVLCControl2_MRL 'get set' : 
+    System.String IVLCControl2_VersionInfo 'get ' : 
+    Boolean IVLCControl2_Visible 'get set' : 
+    Int32 IVLCControl2_Volume 'get set' : 
+    UInt32 BackColor 'get set' : 
+    Boolean Toolbar 'get set' : 
+    AXVLC.IVLCAudio audio 'get ' : 
+    AXVLC.IVLCInput input 'get ' : 
+    AXVLC.IVLCPlaylist playlist 'get ' : 
+    AXVLC.IVLCSubtitle subtitle 'get ' : 
+    AXVLC.IVLCVideo video 'get ' : 
+    Boolean FullscreenEnabled 'get set' : 
+    AXVLC.IVLCMediaDescription mediaDescription 'get ' : 
+  Events:
+    AXVLC.DVLCEvents_playEventHandler DVLCEvents_Event_play: 
+    AXVLC.DVLCEvents_pauseEventHandler DVLCEvents_Event_pause: 
+    AXVLC.DVLCEvents_stopEventHandler DVLCEvents_Event_stop: 
+    AXVLC.DVLCEvents_MediaPlayerNothingSpecialEventHandler MediaPlayerNothingSpecial: 
+    AXVLC.DVLCEvents_MediaPlayerOpeningEventHandler MediaPlayerOpening: 
+    AXVLC.DVLCEvents_MediaPlayerBufferingEventHandler MediaPlayerBuffering: 
+    AXVLC.DVLCEvents_MediaPlayerPlayingEventHandler MediaPlayerPlaying: 
+    AXVLC.DVLCEvents_MediaPlayerPausedEventHandler MediaPlayerPaused: 
+    AXVLC.DVLCEvents_MediaPlayerForwardEventHandler MediaPlayerForward: 
+    AXVLC.DVLCEvents_MediaPlayerBackwardEventHandler MediaPlayerBackward: 
+    AXVLC.DVLCEvents_MediaPlayerEncounteredErrorEventHandler MediaPlayerEncounteredError: 
+    AXVLC.DVLCEvents_MediaPlayerEndReachedEventHandler MediaPlayerEndReached: 
+    AXVLC.DVLCEvents_MediaPlayerStoppedEventHandler MediaPlayerStopped: 
+    AXVLC.DVLCEvents_MediaPlayerTimeChangedEventHandler MediaPlayerTimeChanged: 
+    AXVLC.DVLCEvents_MediaPlayerPositionChangedEventHandler MediaPlayerPositionChanged: 
+    AXVLC.DVLCEvents_MediaPlayerSeekableChangedEventHandler MediaPlayerSeekableChanged: 
+    AXVLC.DVLCEvents_MediaPlayerPausableChangedEventHandler MediaPlayerPausableChanged: 
+  Methods:
+    get_Toolbar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Toolbar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_audio(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_input(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_playlist(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_subtitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_video(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_FullscreenEnabled(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_FullscreenEnabled(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_mediaDescription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    add_play(DVLCEvents_playEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_play(DVLCEvents_playEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_pause(DVLCEvents_pauseEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_pause(DVLCEvents_pauseEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_stop(DVLCEvents_stopEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_stop(DVLCEvents_stopEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerNothingSpecial(DVLCEvents_MediaPlayerNothingSpecialEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerNothingSpecial(DVLCEvents_MediaPlayerNothingSpecialEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerOpening(DVLCEvents_MediaPlayerOpeningEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerOpening(DVLCEvents_MediaPlayerOpeningEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerBuffering(DVLCEvents_MediaPlayerBufferingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerBuffering(DVLCEvents_MediaPlayerBufferingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerPlaying(DVLCEvents_MediaPlayerPlayingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerPlaying(DVLCEvents_MediaPlayerPlayingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerPaused(DVLCEvents_MediaPlayerPausedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerPaused(DVLCEvents_MediaPlayerPausedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerForward(DVLCEvents_MediaPlayerForwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerForward(DVLCEvents_MediaPlayerForwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerBackward(DVLCEvents_MediaPlayerBackwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerBackward(DVLCEvents_MediaPlayerBackwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerEncounteredError(DVLCEvents_MediaPlayerEncounteredErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerEncounteredError(DVLCEvents_MediaPlayerEncounteredErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerEndReached(DVLCEvents_MediaPlayerEndReachedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerEndReached(DVLCEvents_MediaPlayerEndReachedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerStopped(DVLCEvents_MediaPlayerStoppedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerStopped(DVLCEvents_MediaPlayerStoppedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerTimeChanged(DVLCEvents_MediaPlayerTimeChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerTimeChanged(DVLCEvents_MediaPlayerTimeChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerPositionChanged(DVLCEvents_MediaPlayerPositionChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerPositionChanged(DVLCEvents_MediaPlayerPositionChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerSeekableChanged(DVLCEvents_MediaPlayerSeekableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerSeekableChanged(DVLCEvents_MediaPlayerSeekableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerPausableChanged(DVLCEvents_MediaPlayerPausableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerPausableChanged(DVLCEvents_MediaPlayerPausableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    play(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    pause(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Playing(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Position(Single(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Time(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Time(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    shuttle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    fullscreen(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    playFaster(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    playSlower(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Volume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Volume(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    toggleMute(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    setVariable(String(In, HasFieldMarshal), Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    getVariable(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    addTarget(String(In, HasFieldMarshal), Object(In, HasFieldMarshal), VLCPlaylistMode(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_PlaylistIndex(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_PlaylistCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    playlistNext(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    playlistPrev(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    playlistClear(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_VersionInfo(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MRL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_MRL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_AutoPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AutoPlay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_AutoLoop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AutoLoop(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl2_get_AutoLoop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl2_set_AutoLoop(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl2_get_AutoPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl2_set_AutoPlay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BaseURL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BaseURL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_StartTime(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_StartTime(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl2_get_MRL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl2_set_MRL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl2_get_VersionInfo(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl2_get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl2_set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl2_get_Volume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl2_set_Volume(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface AXVLC.DVLCEvents_Event: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Events:
+    AXVLC.DVLCEvents_playEventHandler play: 
+    AXVLC.DVLCEvents_pauseEventHandler pause: 
+    AXVLC.DVLCEvents_stopEventHandler stop: 
+    AXVLC.DVLCEvents_MediaPlayerNothingSpecialEventHandler MediaPlayerNothingSpecial: 
+    AXVLC.DVLCEvents_MediaPlayerOpeningEventHandler MediaPlayerOpening: 
+    AXVLC.DVLCEvents_MediaPlayerBufferingEventHandler MediaPlayerBuffering: 
+    AXVLC.DVLCEvents_MediaPlayerPlayingEventHandler MediaPlayerPlaying: 
+    AXVLC.DVLCEvents_MediaPlayerPausedEventHandler MediaPlayerPaused: 
+    AXVLC.DVLCEvents_MediaPlayerForwardEventHandler MediaPlayerForward: 
+    AXVLC.DVLCEvents_MediaPlayerBackwardEventHandler MediaPlayerBackward: 
+    AXVLC.DVLCEvents_MediaPlayerEncounteredErrorEventHandler MediaPlayerEncounteredError: 
+    AXVLC.DVLCEvents_MediaPlayerEndReachedEventHandler MediaPlayerEndReached: 
+    AXVLC.DVLCEvents_MediaPlayerStoppedEventHandler MediaPlayerStopped: 
+    AXVLC.DVLCEvents_MediaPlayerTimeChangedEventHandler MediaPlayerTimeChanged: 
+    AXVLC.DVLCEvents_MediaPlayerPositionChangedEventHandler MediaPlayerPositionChanged: 
+    AXVLC.DVLCEvents_MediaPlayerSeekableChangedEventHandler MediaPlayerSeekableChanged: 
+    AXVLC.DVLCEvents_MediaPlayerPausableChangedEventHandler MediaPlayerPausableChanged: 
+  Methods:
+    add_play(DVLCEvents_playEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_play(DVLCEvents_playEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_pause(DVLCEvents_pauseEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_pause(DVLCEvents_pauseEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_stop(DVLCEvents_stopEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_stop(DVLCEvents_stopEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerNothingSpecial(DVLCEvents_MediaPlayerNothingSpecialEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerNothingSpecial(DVLCEvents_MediaPlayerNothingSpecialEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerOpening(DVLCEvents_MediaPlayerOpeningEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerOpening(DVLCEvents_MediaPlayerOpeningEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerBuffering(DVLCEvents_MediaPlayerBufferingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerBuffering(DVLCEvents_MediaPlayerBufferingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerPlaying(DVLCEvents_MediaPlayerPlayingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerPlaying(DVLCEvents_MediaPlayerPlayingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerPaused(DVLCEvents_MediaPlayerPausedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerPaused(DVLCEvents_MediaPlayerPausedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerForward(DVLCEvents_MediaPlayerForwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerForward(DVLCEvents_MediaPlayerForwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerBackward(DVLCEvents_MediaPlayerBackwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerBackward(DVLCEvents_MediaPlayerBackwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerEncounteredError(DVLCEvents_MediaPlayerEncounteredErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerEncounteredError(DVLCEvents_MediaPlayerEncounteredErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerEndReached(DVLCEvents_MediaPlayerEndReachedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerEndReached(DVLCEvents_MediaPlayerEndReachedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerStopped(DVLCEvents_MediaPlayerStoppedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerStopped(DVLCEvents_MediaPlayerStoppedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerTimeChanged(DVLCEvents_MediaPlayerTimeChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerTimeChanged(DVLCEvents_MediaPlayerTimeChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerPositionChanged(DVLCEvents_MediaPlayerPositionChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerPositionChanged(DVLCEvents_MediaPlayerPositionChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerSeekableChanged(DVLCEvents_MediaPlayerSeekableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerSeekableChanged(DVLCEvents_MediaPlayerSeekableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_MediaPlayerPausableChanged(DVLCEvents_MediaPlayerPausableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_MediaPlayerPausableChanged(DVLCEvents_MediaPlayerPausableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class AXVLC.DVLCEvents_playEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_pauseEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_stopEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerNothingSpecialEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerOpeningEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerBufferingEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In)): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerPlayingEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerPausedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerForwardEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerBackwardEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerEncounteredErrorEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerEndReachedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerStoppedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerTimeChangedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In)): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerPositionChangedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In)): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerSeekableChangedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean(In)): PrivateScope, Public, Virtual
+Class AXVLC.DVLCEvents_MediaPlayerPausableChangedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean(In)): PrivateScope, Public, Virtual
+Interface AXVLC.VLCPlugin: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    AXVLC.IVLCControl
+    AXVLC.DVLCEvents_Event
+Class AXVLC.VLCPlugin2Class: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    AXVLC.IVLCControl2
+    AXVLC.VLCPlugin2
+    AXVLC.DVLCEvents_Event
+    AXVLC.IVLCControl
+  Properties:
+    Boolean AutoLoop 'get set' : 
+    Boolean AutoPlay 'get set' : 
+    System.String BaseURL 'get set' : 
+    Int32 StartTime 'get set' : 
+    System.String MRL 'get set' : 
+    System.String VersionInfo 'get ' : 
+    Boolean Visible 'get set' : 
+    Int32 Volume 'get set' : 
+    UInt32 BackColor 'get set' : 
+    Boolean Toolbar 'get set' : 
+    AXVLC.IVLCAudio audio 'get ' : 
+    AXVLC.IVLCInput input 'get ' : 
+    AXVLC.IVLCPlaylist playlist 'get ' : 
+    AXVLC.IVLCSubtitle subtitle 'get ' : 
+    AXVLC.IVLCVideo video 'get ' : 
+    Boolean FullscreenEnabled 'get set' : 
+    AXVLC.IVLCMediaDescription mediaDescription 'get ' : 
+    Boolean IVLCControl_Visible 'get set' : 
+    Boolean Playing 'get ' : 
+    Single Position 'get set' : 
+    Int32 Time 'get set' : 
+    Int32 Length 'get ' : 
+    Int32 IVLCControl_Volume 'get set' : 
+    Int32 PlaylistIndex 'get ' : 
+    Int32 PlaylistCount 'get ' : 
+    System.String IVLCControl_VersionInfo 'get ' : 
+    System.String IVLCControl_MRL 'get set' : 
+    Boolean IVLCControl_AutoPlay 'get set' : 
+    Boolean IVLCControl_AutoLoop 'get set' : 
+  Events:
+    AXVLC.DVLCEvents_playEventHandler DVLCEvents_Event_play: 
+    AXVLC.DVLCEvents_pauseEventHandler DVLCEvents_Event_pause: 
+    AXVLC.DVLCEvents_stopEventHandler DVLCEvents_Event_stop: 
+    AXVLC.DVLCEvents_MediaPlayerNothingSpecialEventHandler MediaPlayerNothingSpecial: 
+    AXVLC.DVLCEvents_MediaPlayerOpeningEventHandler MediaPlayerOpening: 
+    AXVLC.DVLCEvents_MediaPlayerBufferingEventHandler MediaPlayerBuffering: 
+    AXVLC.DVLCEvents_MediaPlayerPlayingEventHandler MediaPlayerPlaying: 
+    AXVLC.DVLCEvents_MediaPlayerPausedEventHandler MediaPlayerPaused: 
+    AXVLC.DVLCEvents_MediaPlayerForwardEventHandler MediaPlayerForward: 
+    AXVLC.DVLCEvents_MediaPlayerBackwardEventHandler MediaPlayerBackward: 
+    AXVLC.DVLCEvents_MediaPlayerEncounteredErrorEventHandler MediaPlayerEncounteredError: 
+    AXVLC.DVLCEvents_MediaPlayerEndReachedEventHandler MediaPlayerEndReached: 
+    AXVLC.DVLCEvents_MediaPlayerStoppedEventHandler MediaPlayerStopped: 
+    AXVLC.DVLCEvents_MediaPlayerTimeChangedEventHandler MediaPlayerTimeChanged: 
+    AXVLC.DVLCEvents_MediaPlayerPositionChangedEventHandler MediaPlayerPositionChanged: 
+    AXVLC.DVLCEvents_MediaPlayerSeekableChangedEventHandler MediaPlayerSeekableChanged: 
+    AXVLC.DVLCEvents_MediaPlayerPausableChangedEventHandler MediaPlayerPausableChanged: 
+  Methods:
+    playlistNext(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    playlistPrev(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    playlistClear(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IVLCControl_get_VersionInfo(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl_get_MRL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl_set_MRL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl_get_AutoPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl_set_AutoPlay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl_get_AutoLoop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl_set_AutoLoop(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    add_play(DVLCEvents_playEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_play(DVLCEvents_playEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_pause(DVLCEvents_pauseEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_pause(DVLCEvents_pauseEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_stop(DVLCEvents_stopEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_stop(DVLCEvents_stopEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerNothingSpecial(DVLCEvents_MediaPlayerNothingSpecialEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerNothingSpecial(DVLCEvents_MediaPlayerNothingSpecialEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerOpening(DVLCEvents_MediaPlayerOpeningEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerOpening(DVLCEvents_MediaPlayerOpeningEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerBuffering(DVLCEvents_MediaPlayerBufferingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerBuffering(DVLCEvents_MediaPlayerBufferingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerPlaying(DVLCEvents_MediaPlayerPlayingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerPlaying(DVLCEvents_MediaPlayerPlayingEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerPaused(DVLCEvents_MediaPlayerPausedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerPaused(DVLCEvents_MediaPlayerPausedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerForward(DVLCEvents_MediaPlayerForwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerForward(DVLCEvents_MediaPlayerForwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerBackward(DVLCEvents_MediaPlayerBackwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerBackward(DVLCEvents_MediaPlayerBackwardEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerEncounteredError(DVLCEvents_MediaPlayerEncounteredErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerEncounteredError(DVLCEvents_MediaPlayerEncounteredErrorEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerEndReached(DVLCEvents_MediaPlayerEndReachedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerEndReached(DVLCEvents_MediaPlayerEndReachedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerStopped(DVLCEvents_MediaPlayerStoppedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerStopped(DVLCEvents_MediaPlayerStoppedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerTimeChanged(DVLCEvents_MediaPlayerTimeChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerTimeChanged(DVLCEvents_MediaPlayerTimeChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerPositionChanged(DVLCEvents_MediaPlayerPositionChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerPositionChanged(DVLCEvents_MediaPlayerPositionChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerSeekableChanged(DVLCEvents_MediaPlayerSeekableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerSeekableChanged(DVLCEvents_MediaPlayerSeekableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_MediaPlayerPausableChanged(DVLCEvents_MediaPlayerPausableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_MediaPlayerPausableChanged(DVLCEvents_MediaPlayerPausableChangedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_AutoLoop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AutoLoop(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_AutoPlay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AutoPlay(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BaseURL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BaseURL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_StartTime(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_StartTime(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MRL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_MRL(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_VersionInfo(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Volume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Volume(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Toolbar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Toolbar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_audio(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_input(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_playlist(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_subtitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_video(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_FullscreenEnabled(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_FullscreenEnabled(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_mediaDescription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl_get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl_set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    play(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    pause(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Playing(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Position(Single(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Time(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Time(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    shuttle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    fullscreen(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    playFaster(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    playSlower(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IVLCControl_get_Volume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IVLCControl_set_Volume(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    toggleMute(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    setVariable(String(In, HasFieldMarshal), Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    getVariable(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    addTarget(String(In, HasFieldMarshal), Object(In, HasFieldMarshal), VLCPlaylistMode(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_PlaylistIndex(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_PlaylistCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface AXVLC.VLCPlugin2: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    AXVLC.IVLCControl2
+    AXVLC.DVLCEvents_Event
+Class AXVLC.DVLCEvents_SinkHelper: AutoLayout, AnsiClass, Class, Public, Sealed
+  Interfaces:
+    AXVLC.DVLCEvents
+  Fields:
+    AXVLC.DVLCEvents_playEventHandler m_playDelegate : Public
+    AXVLC.DVLCEvents_pauseEventHandler m_pauseDelegate : Public
+    AXVLC.DVLCEvents_stopEventHandler m_stopDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerNothingSpecialEventHandler m_MediaPlayerNothingSpecialDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerOpeningEventHandler m_MediaPlayerOpeningDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerBufferingEventHandler m_MediaPlayerBufferingDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerPlayingEventHandler m_MediaPlayerPlayingDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerPausedEventHandler m_MediaPlayerPausedDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerForwardEventHandler m_MediaPlayerForwardDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerBackwardEventHandler m_MediaPlayerBackwardDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerEncounteredErrorEventHandler m_MediaPlayerEncounteredErrorDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerEndReachedEventHandler m_MediaPlayerEndReachedDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerStoppedEventHandler m_MediaPlayerStoppedDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerTimeChangedEventHandler m_MediaPlayerTimeChangedDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerPositionChangedEventHandler m_MediaPlayerPositionChangedDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerSeekableChangedEventHandler m_MediaPlayerSeekableChangedDelegate : Public
+    AXVLC.DVLCEvents_MediaPlayerPausableChangedEventHandler m_MediaPlayerPausableChangedDelegate : Public
+    Int32 m_dwCookie : Public
+  Methods:
+    play(): PrivateScope, Public, Virtual
+    pause(): PrivateScope, Public, Virtual
+    stop(): PrivateScope, Public, Virtual
+    MediaPlayerNothingSpecial(): PrivateScope, Public, Virtual
+    MediaPlayerOpening(): PrivateScope, Public, Virtual
+    MediaPlayerBuffering(Int32): PrivateScope, Public, Virtual
+    MediaPlayerPlaying(): PrivateScope, Public, Virtual
+    MediaPlayerPaused(): PrivateScope, Public, Virtual
+    MediaPlayerForward(): PrivateScope, Public, Virtual
+    MediaPlayerBackward(): PrivateScope, Public, Virtual
+    MediaPlayerEncounteredError(): PrivateScope, Public, Virtual
+    MediaPlayerEndReached(): PrivateScope, Public, Virtual
+    MediaPlayerStopped(): PrivateScope, Public, Virtual
+    MediaPlayerTimeChanged(Int32): PrivateScope, Public, Virtual
+    MediaPlayerPositionChanged(Int32): PrivateScope, Public, Virtual
+    MediaPlayerSeekableChanged(Boolean): PrivateScope, Public, Virtual
+    MediaPlayerPausableChanged(Boolean): PrivateScope, Public, Virtual

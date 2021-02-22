@@ -1,0 +1,19 @@
+﻿  MyForm.cpp
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(208): warning C4800: 'bool *': 強制將 bool 的值定為 'true' 或 'false' (效能警告)
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(209): warning C4800: 'bool *': 強制將 bool 的值定為 'true' 或 'false' (效能警告)
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(271): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(1850): note: 請參閱 'inet_addr' 的宣告
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(248): warning C4101: 'bufferPos': 未參考的區域變數
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(249): warning C4101: 'keyPos': 未參考的區域變數
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(328): warning C4244: '=': 將 'wchar_t' 轉換為 'char'，由於類型不同，可能導致資料遺失
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(331): warning C4244: '=': 將 'wchar_t' 轉換為 'char'，由於類型不同，可能導致資料遺失
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(310): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(1850): note: 請參閱 'inet_addr' 的宣告
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(288): warning C4101: 'key': 未參考的區域變數
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(287): warning C4101: 'buffer': 未參考的區域變數
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(355): warning C4244: '=': 將 'wchar_t' 轉換為 'char'，由於類型不同，可能導致資料遺失
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(358): warning C4244: '=': 將 'wchar_t' 轉換為 'char'，由於類型不同，可能導致資料遺失
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(374): warning C4244: '=': 將 'wchar_t' 轉換為 'char'，由於類型不同，可能導致資料遺失
+c:\users\nancyle\desktop\tcpclintform\tcpclintform\MyForm.h(384): warning C4244: '=': 將 'wchar_t' 轉換為 'char'，由於類型不同，可能導致資料遺失
+  TCPClintForm.vcxproj -> C:\Users\nancyle\Desktop\TCPClintForm\Debug\TCPClintForm.exe
+  TCPClintForm.vcxproj -> C:\Users\nancyle\Desktop\TCPClintForm\Debug\TCPClintForm.pdb (Full PDB)
